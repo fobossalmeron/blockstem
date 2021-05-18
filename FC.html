@@ -1,0 +1,80 @@
+<!-- Klaro Cookie Consent -->
+<script
+  defer
+  type="text/javascript"
+  src="https://cdn.kiprotect.com/klaro/v0.7.18/klaro-no-css.js"
+></script>
+<script
+  defer
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/gh/fobossalmeron/blockstem/config.min.js"
+></script>
+
+<!-- HubSpot -->
+<script
+  type="text/plain"
+  data-type="text/javascript"
+  id="hs-script-loader"
+  data-name="hubspot"
+  data-src="//js-na1.hs-scripts.com/20013306.js"
+></script>
+
+<!-- GA -->
+<script
+  async
+  type="text/plain"
+  data-type="text/javascript"
+  data-name="gtm"
+  src="https://www.googletagmanager.com/gtag/js?id=G-XFDZQBMHXB"
+></script>
+
+<script
+  type="text/plain"
+  data-type="text/javascript"
+  data-name="googleAnalytics"
+>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){
+  dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-XFDZQBMHXB', {'anonymize_ip': true});
+</script>
+
+<!-- Fb Pixel -->
+<script
+  type="text/plain"
+  data-type="text/javascript"
+  data-name="facebook"
+>
+  !(function (f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = "2.0";
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = !0;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s);
+  })(
+    window,
+    document,
+    "script",
+    "https://connect.facebook.net/en_US/fbevents.js"
+  );
+  fbq("init", "817277622221722");
+  fbq("track", "PageView");
+</script>
+<noscript
+  ><img
+    height="1"
+    width="1"
+    style="display: none"
+    src="https://www.facebook.com/tr?id=817277622221722&ev=PageView&noscript=1"
+/></noscript>

@@ -20,7 +20,7 @@ var klaroConfig = {
 
     default: false,
 
-    mustConsent: false,
+    mustConsent: true,
 
     acceptAll: true,
 
@@ -69,6 +69,29 @@ var klaroConfig = {
             purposes: ['analytics'],
             cookies: [
                 [/^_g.*/, '/', '.webflow.io'], // delete already set cookies at loading time of Klaro
+            ],
+            optOut: false,
+            callback: function(consent, service) {
+                console.log(
+                    'User consent for service ' + service.name + ': consent=' + consent
+                );
+            },
+        },
+        {
+            name: 'facebook', 
+            title: 'Facebook',
+            purposes: ['marketing'],
+            cookies: [
+                [/^_fb.*/, '/', '.webflow.io'], // delete already set cookies at loading time of Klaro
+            ],
+            optOut: false,
+        },
+        {
+            name: 'hubspot', 
+            title: 'Hacebook',
+            purposes: ['marketing'],
+            cookies: [
+                [/^_hs.*/, '/', '.webflow.io'], // delete already set cookies at loading time of Klaro
             ],
             optOut: false,
         },
