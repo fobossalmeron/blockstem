@@ -424,8 +424,7 @@ to create a white background.
 .klaro .cookie-modal .cm-btn.cm-btn-info,
 .klaro .context-notice .cm-btn.cm-btn-info,
 .klaro .cookie-notice .cm-btn.cm-btn-info {
-  background-color: #2581c4;
-  background-color: var(--blue1, #2581c4);
+  background-color: #1F54DF;
 }
 
 .klaro .context-notice {
@@ -599,6 +598,7 @@ to create a white background.
 }
 
 .klaro .cookie-modal .cm-modal .cm-header h1 {
+  font-family: Archivo, sans-serif;
   margin: 0;
   font-size: 2rem;
   display: block;
@@ -886,7 +886,7 @@ to create a white background.
 
 @media (min-width: 1024px) {
   .klaro .cookie-notice:not(.cookie-modal-notice) {
-    border-radius: 4px;
+    border-radius: 30px;
     border-radius: var(--border-radius, 4px);
     position: fixed;
     position: var(--notice-position, fixed);

@@ -13,7 +13,7 @@ var klaroConfig = {
   acceptAll: true,
   hideDeclineAll: true,
   hideLearnMore: false,
-  noticeAsModal: true,
+  noticeAsModal: false,
   disablePoweredBy: true,
   translations: {
     zz: {
@@ -25,8 +25,18 @@ var klaroConfig = {
         description:
           "Aquí puedes personalizar la información que recolectamos.",
       },
+      consentNotice: {
+        description:
+          "¡Hola! ¿Podríamos habilitar algunos servicios adicionales para analytics & publicidad? Siempre puedes cambiar o retirar tu consentimiento más tarde.",
+      },
+      service: {
+        disableAll: {
+          description:
+            "Utiliza este interruptor para activar o desactivar todos los servicios.",
+        },
+      },
       privacyPolicy: {
-        text: "Para saber más, por favor lee nuestra <a href='/privacidad'>Política de privacidad</a>",
+        text: "Para saber más, por favor lee nuestra <a href='/privacidad'>política de privacidad</a>.",
       },
       googleAnalytics: {
         description: "Estadísticas de uso de nuestro sitio web.",
