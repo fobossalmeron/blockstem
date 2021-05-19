@@ -1,6 +1,6 @@
 var klaroConfig = {
   version: 1,
-  elementID: "klaro",
+  elementID: "cookieConsent",
   noAutoLoad: false,
   htmlTexts: true,
   embedded: false,
@@ -15,6 +15,7 @@ var klaroConfig = {
   hideLearnMore: false,
   noticeAsModal: false,
   disablePoweredBy: true,
+  additionalClass: 'appearscroll',
   translations: {
     zz: {
       privacyPolicyUrl: "/privacidad",
@@ -27,7 +28,7 @@ var klaroConfig = {
       },
       consentNotice: {
         description:
-          "¡Hola! ¿Podríamos habilitar algunos servicios adicionales para analytics & publicidad? Siempre puedes cambiar o retirar tu consentimiento más tarde.",
+          "¡Hola! ¿Podríamos habilitar algunos servicios para analytics & publicidad? Siempre puedes cambiar o retirar tu consentimiento más tarde.",
       },
       service: {
         disableAll: {
@@ -79,6 +80,7 @@ var klaroConfig = {
       name: "facebook",
       title: "Facebook",
       purposes: ["marketing"],
+      default: true,
       optOut: false,
       cookies: [
         [/^_fb.*/, "/", ".webflow.io"],
@@ -89,6 +91,7 @@ var klaroConfig = {
       name: "hubspot",
       title: "Hubspot",
       purposes: ["marketing"],
+      default: true,
       optOut: false,
       cookies: [
         [/^_hs.*/, "/", ".webflow.io"],

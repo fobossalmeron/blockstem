@@ -379,11 +379,11 @@ to create a white background.
   margin-right: 0.5em;
   vertical-align: middle;
 }
-/****** AQUI ****/ 
+/****** AQUI ****/
 .klaro .cookie-modal .cm-btn,
 .klaro .context-notice .cm-btn,
 .klaro .cookie-notice .cm-btn {
-  color: #F3F4F5;
+  color: #f3f4f5;
   background-color: #5c5c5c;
   background-color: var(--dark2, #5c5c5c);
   border-radius: 50px;
@@ -410,21 +410,38 @@ to create a white background.
 .klaro .cookie-modal .cm-btn.cm-btn-success,
 .klaro .context-notice .cm-btn.cm-btn-success,
 .klaro .cookie-notice .cm-btn.cm-btn-success {
-  background-color: #1a936f;
-  background-color: var(--green1, #1a936f);
+  background-color: #4DA48C;
+  border: 2px solid transparent;
+  transition: .3s ease all;
+}
+
+.klaro .cookie-modal .cm-btn.cm-btn-success:hover,
+.klaro .context-notice .cm-btn.cm-btn-success:hover,
+.klaro .cookie-notice .cm-btn.cm-btn-success:hover {
+  background-color: #060809;
+  border: 2px solid #4DA48C;
 }
 
 .klaro .cookie-modal .cm-btn.cm-btn-success-var,
 .klaro .context-notice .cm-btn.cm-btn-success-var,
 .klaro .cookie-notice .cm-btn.cm-btn-success-var {
-  background-color: #24cc9a;
-  background-color: var(--green2, #24cc9a);
+  background-color: #4DA48C;
+  transition: .3s ease all;
 }
 
 .klaro .cookie-modal .cm-btn.cm-btn-info,
 .klaro .context-notice .cm-btn.cm-btn-info,
 .klaro .cookie-notice .cm-btn.cm-btn-info {
-  background-color: #1F54DF;
+  background-color: #1f54df;
+  border: 2px solid transparent;
+  transition: .3s ease all;
+}
+
+.klaro .cookie-modal .cm-btn.cm-btn-info:hover,
+.klaro .context-notice .cm-btn.cm-btn-info:hover,
+.klaro .cookie-notice .cm-btn.cm-btn-info:hover {
+  background-color: #060809;
+  border: 2px solid #1f54df;
 }
 
 .klaro .context-notice {
@@ -520,8 +537,8 @@ to create a white background.
 .klaro .cookie-modal .cm-modal.cm-klaro {
   background-image: linear-gradient(146deg, #000 -70%, #3d3d3d 130%);
   border-radius: 30px;
+  font-size: 1rem;
   color: #fafafa;
-  color: var(--light1, #fafafa);
   z-index: 1001;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 5px 5px 10px 0 rgba(0, 0, 0, 0.19);
   width: 100%;
@@ -560,11 +577,8 @@ to create a white background.
 
 .klaro .cookie-modal .cm-modal .cm-footer {
   border-top-color: #5c5c5c;
-  border-top-color: var(--dark2, #5c5c5c);
   border-top-width: 1px;
-  border-top-width: var(--border-width, 1px);
   border-top-style: solid;
-  border-top-style: var(--border-style, solid);
   padding: 5%;
 }
 
@@ -574,16 +588,14 @@ to create a white background.
   justify-content: space-between;
 }
 
-.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by {
-  font-size: 0.8em;
-  padding-top: 4px;
-  text-align: right;
-  padding-right: 8px;
-}
-
-.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by a {
-  color: #5c5c5c;
-  color: var(--dark2, #5c5c5c);
+@media (max-width: 399px) {
+  .klaro .cookie-modal .cm-modal .cm-footer .cm-footer-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .klaro .cookie-modal .cm-modal .cm-footer .cm-footer-buttons:first-child {
+    margin-bottom: 10px;
+  }
 }
 
 .klaro .cookie-modal .cm-modal .cm-header {
@@ -602,7 +614,7 @@ to create a white background.
   margin: 0;
   font-size: 2rem;
   display: block;
-  margin-top:0;
+  margin-top: 0;
 }
 
 .klaro .cookie-modal .cm-modal .cm-header h1.title {
@@ -882,6 +894,7 @@ to create a white background.
   width: 100%;
   bottom: 0;
   right: 0;
+  font-size:1rem;
 }
 
 @media (min-width: 1024px) {
@@ -892,9 +905,12 @@ to create a white background.
     left: auto;
     bottom: 20px;
     top: auto;
-    max-width: 400px;
+    max-width: 460px;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2),
       5px 5px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+  .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body{
+    padding: 1em 1.6em 1.6em 2em;
   }
 }
 
@@ -928,7 +944,7 @@ to create a white background.
 
 .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p {
   margin-bottom: 0.5em;
-  font-size:1rem;
+  font-size: 1rem;
 }
 
 .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p.cn-changes {
