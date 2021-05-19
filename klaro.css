@@ -598,14 +598,14 @@ to create a white background.
   padding-right: 24px;
 }
 
-.klaro .cookie-modal .cm-modal .cm-header h4 {
+.klaro .cookie-modal .cm-modal .cm-header h1 {
   margin: 0;
   font-size: 2rem;
   display: block;
   margin-top:0;
 }
 
-.klaro .cookie-modal .cm-modal .cm-header h4.title {
+.klaro .cookie-modal .cm-modal .cm-header h1.title {
   padding-right: 20px;
 }
 
