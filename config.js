@@ -42,7 +42,7 @@ var klaroConfig = {
       googleAnalytics: {
         description: "Estadísticas de uso de nuestro sitio web.",
       },
-      googleAnalytics: {
+      gtm: {
         description: "Estadísticas de uso de nuestro sitio web.",
       },
       facebook: {

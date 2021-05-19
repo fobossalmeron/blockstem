@@ -1,39 +1,11 @@
-/*
-We declare all variables here as default so that they are easy to override...
-*/
-/* Border, shadows, ... */
-/*
-Variables that begin with $var- should NEVER be used directly in CSS rules.
-they should only be included via the "@include var(property, var-name)"
-mechanism.
-*/
-/* Border styles */
-/* Cookie notice positioning */
-/* Text colors */
-/* Font Families */
-/* White */
-/* Differently shaded colors */
-/*
-Use @include var(property, varname) to include a variable, e.g.
-  
-    @include var(background-color, white1);
-
-to create a white background.
-*/
-/* Spacing */
-/* Breakpoints */
 .klaro {
   font-family: inherit;
-  font-family: var(--font-family, inherit);
   font-size: 14px;
-  font-size: var(--font-size, 14px);
 }
 
 .klaro button {
   font-family: inherit;
-  font-family: var(--font-family, inherit);
   font-size: 14px;
-  font-size: var(--font-size, 14px);
 }
 
 .klaro.cm-as-context-notice {
@@ -42,21 +14,12 @@ to create a white background.
   padding-top: 12px;
 }
 
-.klaro .cookie-modal,
-.klaro .context-notice,
-.klaro .cookie-notice {
-  /* The switch - the box around the slider */
-}
-
 .klaro .cookie-modal .cm-switch-container,
 .klaro .context-notice .cm-switch-container,
 .klaro .cookie-notice .cm-switch-container {
   border-bottom-style: solid;
-  border-bottom-style: var(--border-style, solid);
   border-bottom-width: 1px;
-  border-bottom-width: var(--border-width, 1px);
   border-bottom-color: #c8c8c8;
-  border-bottom-color: var(--light2, #c8c8c8);
   display: block;
   position: relative;
   padding: 10px;
@@ -97,7 +60,6 @@ to create a white background.
 .klaro .context-notice .cm-list-input:checked + .cm-list-label .slider,
 .klaro .cookie-notice .cm-list-input:checked + .cm-list-label .slider {
   background-color: #1a936f;
-  background-color: var(--green1, #1a936f);
 }
 
 .klaro
@@ -116,7 +78,6 @@ to create a white background.
   + .cm-list-label
   .slider {
   background-color: #1a936f;
-  background-color: var(--green1, #1a936f);
   opacity: 0.6;
 }
 
@@ -143,7 +104,6 @@ to create a white background.
 .klaro .context-notice .cm-list-input.only-required + .cm-list-label .slider,
 .klaro .cookie-notice .cm-list-input.only-required + .cm-list-label .slider {
   background-color: #24cc9a;
-  background-color: var(--green2, #24cc9a);
   opacity: 0.8;
 }
 
@@ -170,7 +130,6 @@ to create a white background.
 .klaro .context-notice .cm-list-input.required:checked + .cm-list-label .slider,
 .klaro .cookie-notice .cm-list-input.required:checked + .cm-list-label .slider {
   background-color: #24cc9a;
-  background-color: var(--green2, #24cc9a);
   opacity: 0.8;
   cursor: not-allowed;
 }
@@ -203,16 +162,8 @@ to create a white background.
 .klaro .context-notice .cm-list-description,
 .klaro .cookie-notice .cm-list-description {
   color: #7c7c7c;
-  color: var(--dark3, #7c7c7c);
   font-size: 0.9em;
   padding-top: 4px;
-}
-
-.klaro .cookie-modal .cm-list-label,
-.klaro .context-notice .cm-list-label,
-.klaro .cookie-notice .cm-list-label {
-  /* The slider */
-  /* Rounded sliders */
 }
 
 .klaro .cookie-modal .cm-list-label .cm-switch,
@@ -226,7 +177,6 @@ to create a white background.
 .klaro .context-notice .cm-list-label .slider,
 .klaro .cookie-notice .cm-list-label .slider {
   background-color: #f2f2f2;
-  background-color: var(--white2, #f2f2f2);
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -242,7 +192,6 @@ to create a white background.
 .klaro .context-notice .cm-list-label .slider::before,
 .klaro .cookie-notice .cm-list-label .slider::before {
   background-color: #e6e6e6;
-  background-color: var(--white3, #e6e6e6);
   position: absolute;
   content: "";
   height: 20px;
@@ -268,8 +217,6 @@ to create a white background.
 .klaro .context-notice .cm-list-label input:focus + .slider,
 .klaro .cookie-notice .cm-list-label input:focus + .slider {
   box-shadow-color: #48dfb2;
-  box-shadow-color: var(--green3, #48dfb2);
-  box-shadow: 0 0 1px var(color, green3);
 }
 
 .klaro .cookie-modal .cm-list-label input:checked + .slider::before,
@@ -303,7 +250,6 @@ to create a white background.
 .klaro .context-notice a,
 .klaro .cookie-notice a {
   color: #1a936f;
-  color: var(--green1, #1a936f);
   text-decoration: none;
 }
 
@@ -326,7 +272,6 @@ to create a white background.
 .klaro .cookie-notice ul,
 .klaro .cookie-notice li {
   color: #fafafa;
-  color: var(--light1, #fafafa);
 }
 
 .klaro .cookie-modal p,
@@ -370,7 +315,6 @@ to create a white background.
 .klaro .cookie-notice h5,
 .klaro .cookie-notice h6 {
   font-family: inherit;
-  font-family: var(--title-font-family, inherit);
 }
 
 .klaro .cookie-modal .cm-link,
@@ -379,13 +323,11 @@ to create a white background.
   margin-right: 0.5em;
   vertical-align: middle;
 }
-/****** AQUI ****/
 .klaro .cookie-modal .cm-btn,
 .klaro .context-notice .cm-btn,
 .klaro .cookie-notice .cm-btn {
   color: #f3f4f5;
   background-color: #5c5c5c;
-  background-color: var(--dark2, #5c5c5c);
   border-radius: 50px;
   padding: 9px 17px;
   margin-right: 0.5em;
@@ -404,7 +346,6 @@ to create a white background.
 .klaro .context-notice .cm-btn.cm-btn-close,
 .klaro .cookie-notice .cm-btn.cm-btn-close {
   background-color: #c8c8c8;
-  background-color: var(--light2, #c8c8c8);
 }
 
 .klaro .cookie-modal .cm-btn.cm-btn-success,
@@ -446,15 +387,10 @@ to create a white background.
 
 .klaro .context-notice {
   border-radius: 4px;
-  border-radius: var(--border-radius, 4px);
   border-style: solid;
-  border-style: var(--border-style, solid);
   border-width: 1px;
-  border-width: var(--border-width, 1px);
   border-color: #c8c8c8;
-  border-color: var(--light2, #c8c8c8);
   background-color: #fafafa;
-  background-color: var(--light1, #fafafa);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -466,24 +402,19 @@ to create a white background.
 
 .klaro .context-notice.cm-dark {
   background-color: #333;
-  background-color: var(--dark1, #333);
   border-color: #5c5c5c;
-  border-color: var(--dark2, #5c5c5c);
 }
 
 .klaro .context-notice.cm-dark p {
   color: #fafafa;
-  color: var(--light1, #fafafa);
 }
 
 .klaro .context-notice.cm-dark p a {
   color: #459cdc;
-  color: var(--blue2, #459cdc);
 }
 
 .klaro .context-notice p {
   color: #333;
-  color: var(--dark1, #333);
   flex-grow: 0;
   text-align: center;
   padding-top: 0;
@@ -492,7 +423,6 @@ to create a white background.
 
 .klaro .context-notice p a {
   color: #24cc9a;
-  color: var(--green2, #24cc9a);
 }
 
 .klaro .context-notice p.cm-buttons {
@@ -572,7 +502,6 @@ to create a white background.
 
 .klaro .cookie-modal .cm-modal .hide svg {
   stroke: #fafafa;
-  stroke: var(--light1, #fafafa);
 }
 
 .klaro .cookie-modal .cm-modal .cm-footer {
@@ -600,11 +529,8 @@ to create a white background.
 
 .klaro .cookie-modal .cm-modal .cm-header {
   border-bottom-width: 1px;
-  border-bottom-width: var(--border-width, 1px);
   border-bottom-style: solid;
-  border-bottom-style: var(--border-style, solid);
   border-bottom-color: #5c5c5c;
-  border-bottom-color: var(--dark2, #5c5c5c);
   padding: 5%;
   padding-right: 24px;
 }
@@ -657,7 +583,6 @@ to create a white background.
   .cm-services
   .cm-caret {
   color: #a0a0a0;
-  color: var(--light3, #a0a0a0);
 }
 
 .klaro
@@ -756,7 +681,6 @@ to create a white background.
   li.cm-purpose
   p.purposes {
   color: #a0a0a0;
-  color: var(--light3, #a0a0a0);
   font-size: 0.8em;
 }
 
@@ -785,11 +709,8 @@ to create a white background.
   ul.cm-purposes
   li.cm-purpose.cm-toggle-all {
   border-top-width: 1px;
-  border-top-width: var(--border-width, 1px);
   border-top-style: solid;
-  border-top-style: var(--border-style, solid);
   border-top-color: #5c5c5c;
-  border-top-color: var(--dark2, #5c5c5c);
   padding-top: 1em;
 }
 
@@ -881,14 +802,12 @@ to create a white background.
   li.cm-purpose
   span.cm-required {
   color: #5c5c5c;
-  color: var(--dark2, #5c5c5c);
   padding-left: 0.2em;
   font-size: 0.8em;
 }
 
 .klaro .cookie-notice:not(.cookie-modal-notice) {
   background-color: #333;
-  background-color: var(--dark1, #333);
   z-index: 999;
   position: fixed;
   width: 100%;
@@ -1001,9 +920,7 @@ to create a white background.
 
 .klaro .cookie-modal-notice {
   background-color: #333;
-  background-color: var(--dark1, #333);
   color: #fafafa;
-  color: var(--light1, #fafafa);
   z-index: 1001;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 5px 5px 10px 0 rgba(0, 0, 0, 0.19);
   width: 100%;
@@ -1020,7 +937,6 @@ to create a white background.
 @media (min-width: 400px) {
   .klaro .cookie-modal-notice {
     border-radius: 4px;
-    border-radius: var(--border-radius, 4px);
     position: relative;
     margin: 0 auto;
     max-width: 400px;
