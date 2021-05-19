@@ -8,16 +8,16 @@ var klaroConfig = {
   storageMethod: "cookie",
   cookieName: "blockstem",
   cookieExpiresAfterDays: 120,
-  default: true,
-  mustConsent: true,
-  acceptAll: false,
-  hideDeclineAll: false,
+  default: false,
+  mustConsent: false,
+  acceptAll: true,
+  hideDeclineAll: true,
   hideLearnMore: false,
-  noticeAsModal: false,
-  disablePoweredBy: false,
+  noticeAsModal: true,
+  disablePoweredBy: true,
   translations: {
     zz: {
-        privacyPolicyUrl: '/privacidad',
+      privacyPolicyUrl: "/privacidad",
     },
     es: {
       consentModal: {
@@ -26,7 +26,7 @@ var klaroConfig = {
           "Aquí puedes personalizar la información que recolectamos.",
       },
       privacyPolicy: {
-          text: "Para saber más, por favor lee nuestra",
+        text: "Para saber más, por favor lee nuestra <a href='/privacidad'>Política de privacidad</a>",
       },
       googleAnalytics: {
         description: "Estadísticas de uso de nuestro sitio web.",
@@ -51,42 +51,37 @@ var klaroConfig = {
       name: "googleAnalytics",
       title: "Google Analytics",
       purposes: ["analytics"],
+      optOut: false,
       cookies: [
         [/^_g.*/, "/", ".webflow.io"],
         [/^_g.*/, "/", ".blockstem.org"], // delete already set cookies at loading time of Klaro
       ],
-      optOut: false,
-      callback: function (consent, service) {
-        console.log(
-          "User consent for service " + service.name + ": consent=" + consent
-        );
-      },
     },
     {
-        name: "gtm",
-        title: "Google Tag Manager",
-        purposes: ["analytics"],
-        optOut: false,
-      },
+      name: "gtm",
+      title: "Google Tag Manager",
+      purposes: ["analytics"],
+      optOut: false,
+    },
     {
       name: "facebook",
       title: "Facebook",
       purposes: ["marketing"],
+      optOut: false,
       cookies: [
         [/^_fb.*/, "/", ".webflow.io"],
         [/^_fb.*/, "/", ".blockstem.org"], // delete already set cookies at loading time of Klaro
       ],
-      optOut: false,
     },
     {
       name: "hubspot",
       title: "Hubspot",
       purposes: ["marketing"],
+      optOut: false,
       cookies: [
-        [/^_hs.*/, "/", ".webflow.io"], 
+        [/^_hs.*/, "/", ".webflow.io"],
         [/^_hs.*/, "/", ".blockstem.org"], // delete already set cookies at loading time of Klaro
       ],
-      optOut: false,
     },
   ],
 };
