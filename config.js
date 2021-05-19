@@ -8,7 +8,7 @@ var klaroConfig = {
   storageMethod: "cookie",
   cookieName: "blockstem",
   cookieExpiresAfterDays: 120,
-  default: false,
+  default: true,
   mustConsent: true,
   acceptAll: true,
   hideDeclineAll: true,
@@ -67,7 +67,7 @@ var klaroConfig = {
     },
     {
       name: "hubspot",
-      title: "Hacebook",
+      title: "Hubspot",
       purposes: ["marketing"],
       cookies: [
         [/^_hs.*/, "/", ".webflow.io"], // delete already set cookies at loading time of Klaro
