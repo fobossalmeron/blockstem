@@ -62,6 +62,7 @@ var klaroConfig = {
       title: "Google Analytics",
       purposes: ["analytics"],
       optOut: false,
+      default: true,
       cookies: [
         [/^_g.*/, "/", ".webflow.io"],
         [/^_g.*/, "/", ".blockstem.org"], // delete already set cookies at loading time of Klaro
@@ -71,6 +72,7 @@ var klaroConfig = {
       name: "gtm",
       title: "Google Tag Manager",
       purposes: ["analytics"],
+      default: true,
       optOut: false,
     },
     {

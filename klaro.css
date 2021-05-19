@@ -887,19 +887,12 @@ to create a white background.
 @media (min-width: 1024px) {
   .klaro .cookie-notice:not(.cookie-modal-notice) {
     border-radius: 30px;
-    border-radius: var(--border-radius, 4px);
     position: fixed;
-    position: var(--notice-position, fixed);
     right: 20px;
-    right: var(--notice-right, 20px);
     left: auto;
-    left: var(--notice-left, auto);
     bottom: 20px;
-    bottom: var(--notice-bottom, 20px);
     top: auto;
-    top: var(--notice-top, auto);
     max-width: 400px;
-    max-width: var(--notice-max-width, 400px);
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2),
       5px 5px 10px 0 rgba(0, 0, 0, 0.19);
   }
@@ -931,11 +924,11 @@ to create a white background.
   margin-right: 0;
   bottom: 0;
   padding: 1em;
-  padding-top: 0;
 }
 
 .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p {
   margin-bottom: 0.5em;
+  font-size:1rem;
 }
 
 .klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p.cn-changes {
