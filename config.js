@@ -11,7 +11,7 @@ var klaroConfig = {
   default: true,
   mustConsent: true,
   acceptAll: true,
-  hideDeclineAll: false,
+  hideDeclineAll: true,
   hideLearnMore: false,
   noticeAsModal: false,
   disablePoweredBy: true,
