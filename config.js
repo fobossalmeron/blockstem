@@ -57,6 +57,12 @@ var klaroConfig = {
       },
     },
     {
+        name: "gtm",
+        title: "Google Tag Manager",
+        purposes: ["analytics"],
+        optOut: false,
+      },
+    {
       name: "facebook",
       title: "Facebook",
       purposes: ["marketing"],
