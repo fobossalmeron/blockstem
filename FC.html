@@ -1,14 +1,15 @@
+
 <!-- Klaro Cookie Consent -->
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/fobossalmeron/blockstem@0.1.0/klaro.min.css">
 <script
   defer
-  type="text/javascript"
-  src="https://cdn.jsdelivr.net/gh/fobossalmeron/blockstem@latest/config.min.js"
-></script>
+  type="application/javascript"
+  src="https://cdn.jsdelivr.net/gh/fobossalmeron/blockstem@0.1.0/config.min.js"></script>
 <script
   defer
-  type="text/javascript"
-  src="https://cdn.kiprotect.com/klaro/v0.7.18/klaro-no-css.js"
-></script>
+  type="application/javascript"
+  src="https://cdn.kiprotect.com/klaro/v0.7.18/klaro-no-css.js"></script>
 
 <!-- HubSpot -->
 <script
@@ -16,8 +17,7 @@
   data-type="text/javascript"
   id="hs-script-loader"
   data-name="hubspot"
-  data-src="//js-na1.hs-scripts.com/20013306.js"
-></script>
+  data-src="//js-na1.hs-scripts.com/20013306.js"></script>
 
 <!-- GA -->
 <script
@@ -25,14 +25,11 @@
   type="text/plain"
   data-type="text/javascript"
   data-name="gtm"
-  data-src="https://www.googletagmanager.com/gtag/js?id=G-XFDZQBMHXB"
-></script>
-
+  data-src="https://www.googletagmanager.com/gtag/js?id=G-XFDZQBMHXB"></script>
 <script
   type="text/plain"
   data-type="text/javascript"
-  data-name="googleAnalytics"
->
+  data-name="googleAnalytics">
   window.dataLayer = window.dataLayer || [];
   function gtag(){
   dataLayer.push(arguments);
@@ -45,8 +42,7 @@
 <script
   type="text/plain"
   data-type="text/javascript"
-  data-name="facebook"
->
+  data-name="facebook">
   !(function (f, b, e, v, n, t, s) {
     if (f.fbq) return;
     n = f.fbq = function () {
@@ -71,10 +67,26 @@
   fbq("init", "817277622221722");
   fbq("track", "PageView");
 </script>
-<noscript
-  ><img
+<noscript><img
     height="1"
     width="1"
     style="display: none"
     src="https://www.facebook.com/tr?id=817277622221722&ev=PageView&noscript=1"
-/></noscript>
+    /></noscript>
+
+<script>
+Webflow.push(function () {
+  $(".ctapruebawhite, .ctapruebablack").click(function (e) {
+    e.preventDefault();
+    $("body").css("overflow", "hidden");
+  });
+});
+</script>
+<script>
+  Webflow.push(function () {
+    $(".closemodal, .backgroundoverlay").click(function (e) {
+      e.preventDefault();
+      $("body").css("overflow", "auto");
+    });
+});
+</script>
